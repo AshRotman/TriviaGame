@@ -13,28 +13,34 @@
 //  });
 // }
 
-var correctCounter = 0;
-var wrongCounter = 0;
+var correctAnswer = 0;
+var wrongAnswer = 0;
+
+$(document).ready(function() {
+
+   $("#btn1").on("click", function(){
+    if (true){
+     correctAnswer++;
+    } else {
+      wrongAnswer++;
+    }
     
-  $(document).ready(function() {
-    
-   $("#yes").click(function(){
-    if (("#yes") == true)
-     correctCounter++;
-    
-   $("#correct").text("correct: " +  correctCounter);
+   $("#correct").html("correct: "  + correctAnswer);
            
     });
    
-   $("#no").click(function(){
-    if (("#no") == true)
-     wrongCounter++;
+   $("#btn2").on("click", function(){
+    if (true) {
+     wrongAnswer++;
+    } else {
+    }
     
-   $("#wrong").text("wrong: " + wrongCounter);
+   $("#wrong").html("wrong: " + wrongAnswer);
+
   });
 });
 
-
+// if ((".no") == true) {
 //Timer function
 var number = 30;
 
